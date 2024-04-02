@@ -1,0 +1,169 @@
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html{
+    /* me permite deslizar cuando hago clic en los links del menu */
+    scroll-behavior: smooth;
+}
+
+.content{
+    background: linear-gradient(to bottom, rgba(30,35,38,.2), rgba(30,35,38,1)),
+    linear-gradient(to top, rgba(30,35,38,.2), rgba(30,35,38,.9)),
+    url("../img/5.jpg");
+    background-size: cover;
+    /*height: auto;*/
+    color: #fdfcfcea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 80px;
+    padding-top: 210px;
+    width: 100%;
+}
+.content2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 80px;
+    padding-top: 50px;
+    color: #fdfcfc;
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1));
+
+}
+
+.contenedor-foto {
+    width: 300px; /* Ancho deseado del div */
+    height: 200px; /* Alto deseado del div */
+    overflow: hidden; /* Para recortar la imagen que se salga del div */
+    position: relative; /* Para posicionar correctamente la imagen dentro del div */
+    margin: 10px 10px;
+  }
+  
+  .imagen {
+    width: 100%; /* La imagen ocupa el 100% del ancho del div */
+    height: auto; /* La altura se ajusta automáticamente para mantener la proporción */
+    position: absolute; /* Para que la imagen se ajuste al div */
+    top: 50%; /* Posiciona la imagen en el centro verticalmente */
+    left: 50%; /* Posiciona la imagen en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Ajusta la posición de la imagen */
+  }
+
+ .content .datos {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+.results {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+ }
+
+ h2{
+    text-align: center;
+    color: rgba(255, 255, 255, 0.746);
+    font-size: 30px;
+ }
+ label{
+    display: inline-block;
+    width: 260px;
+    font-weight: bold;
+    font-size: 20px;
+  }
+ form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ }
+ form div{
+    padding: 10px 10px;
+ 
+ }
+ input{
+    height: 40px;
+    font-size: 20px;
+    color: rgb(17, 15, 15);
+    font-weight: bold;
+    width: 200px;
+    color: black;
+    text-align: center;
+ }
+ .ecuaciones input{
+    height: 60px;
+    width: 240px;
+    font-style: italic;
+    font-size: 16px;
+ }
+ .results_data, .ecuaciones{
+    border: 1px solid hsla(0, 0%, 0%, 0.3);
+    border-radius: 10px;
+    padding: 20px 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+ }
+ 
+ .btn{
+    border-radius: 10px;
+    height: 50px;
+ }
+
+ .btn:hover{
+    background-color: rgb(10, 9, 9);
+    color: rgb(246, 238, 238);
+
+ }
+ h1{
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.746);
+    font-size: 30px;
+ }
+
+
+
+ /*RESPONSIVE*/
+ @media(max-width:984px){
+
+    .content .datos {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+
+     .content2 .results{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+     }
+     .content2{
+        height: 165vh;
+     }
+     .ecuaciones{
+        margin-top: 10px;
+     }
+     .results_data, .ecuaciones{
+        text-align: center;
+     }
+     .form_uno div input{
+        width: 100%;
+     }
+     .form_uno div label{
+        text-align: center;
+     }
+   
+ }
+ 
+ @media(max-width:372px){
+
+ .results_data, .ecuaciones{
+   border: none;
+ }}

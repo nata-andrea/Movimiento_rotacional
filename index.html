@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css"/>
+    <title>Práctica movimiento rotacional</title>
+</head>
+<body>
+ 
+    <section id="content" class="content">
+        <div class="datos">
+            <div class="contenedor-foto">
+               <img src="./img/2.jpg" class="imagen">
+            </div>
+            <div class="form_uno">
+                <form>
+                    <div>
+                    <h1>Movimiento rotacional </h1>
+                    </div>
+                    <div >
+                        <label  for="m_esfera">Masa de la esfera (kg)</label>
+                        <input  type="text" id="m_esfera" name="m_esfera" >
+                    </div>
+                    <div>
+                        <label for="m_barra">Masa de la barra (kg)</label>
+                        <input type="text" id="m_barra" name="m_barra" >
+                    </div>
+                    <div>
+                        <label for="longitud">Longitud (m)</label>
+                        <input type="text" id="longitud" name="longitud" >
+                    </div>
+
+                    <div>
+                        <label for="radio">Radio de la esfera (m)</label>
+                        <input type="text" id="radio" name="radio" >
+                    </div>
+
+                    <div>
+                        <label for="theta1">&theta;&#x0307; (Rad)</sup></label>
+                        <input type="text" id="theta1" name="theta1" >
+                    </div>
+
+                    <div>
+                        <label for="theta2">&theta;&#x0307; (Rad)</sup></label>
+                        <input type="text" id="theta2" name="theta2" >
+                    </div>
+
+                    <div>
+                        <label for="k">k (N*m)</sup></label>
+                        <input type="text" id="k" name="k" >
+                    </div>
+
+                    <div class="boton">
+                        <input type="button" onclick="capturar_datos()" value="Enviar" class="btn">
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="content2">
+        <div class="results">
+            <div class="results_data">
+                <form>
+                    <div>
+                        <h2>Resultados</h2>
+                    </div>
+                    <div>
+                        <label for="inercia">Momento de inercia I (kg*m<sup>2</sup>)</label>
+                        <input type="text" id="inercia" name="inercia" readonly>
+                    </div>
+                    <div>
+                        <label for="Velocidad">Velocidad angular &omega; (Rad/s<sup>2</sup>)</label>
+                        <input type="text" id="Velocidad" name="Velocidad" readonly>
+                    </div>
+                    <div>
+                        <label for="phi">&phi; (Rad)</label>
+                        <input type="text" id="phi" name="phi" readonly>
+                    </div>
+
+                    <div>
+                        <label for="A">A</label>
+                        <input type="text" id="A" name="A" readonly>
+                    </div>
+                    <div>
+                        <input type="button" onclick="limpiar_datos()" value="Limpiar datos" class="btn">
+                    </div>
+
+                </form>
+            </div>
+
+            <div class="ecuaciones">
+                <form>
+                    <div>
+                        <h2>Ecuaciones</h2>
+                    </div>
+                    <div>
+                        <input type="text" id="ecu1" name="ecu1" readonly>
+                    </div>
+                    <div>
+                        <input type="text" id="ecu2" name="ecu2" readonly>
+                    </div>
+
+                    <div>
+                        <input type="text" id="ecu3" name="ecu3" readonly>
+                    </div>
+                  
+            </form>
+            </div>
+        </div>
+
+    </section>
+ 
+
+    <script type="text/javascript"  src="js/funciones.js"></script>
+
+</body>
+</html>
