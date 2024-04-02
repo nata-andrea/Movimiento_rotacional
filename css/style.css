@@ -39,7 +39,7 @@ html{
 
 .contenedor-foto {
     width: 300px; /* Ancho deseado del div */
-    height: 200px; /* Alto deseado del div */
+    height: 400px; /* Alto deseado del div */
     overflow: hidden; /* Para recortar la imagen que se salga del div */
     position: relative; /* Para posicionar correctamente la imagen dentro del div */
     margin: 10px 10px;
