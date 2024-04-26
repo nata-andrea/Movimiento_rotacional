@@ -1,0 +1,26 @@
+function SeatingStudents(arr) {
+  const numDesks = arr.shift();
+  const occupiedDesks = new Set(arr);
+
+  let count = 0;
+
+  for (let desk = 1; desk <= numDesks; desk++) {
+    if (!occupiedDesks.has(desk)) {
+      if (!occupiedDesks.has(desk + 1)) {
+        count++;
+      }
+      if (!occupiedDesks.has(desk + 2)) {
+        count++;
+      }
+    }
+  }
+
+  return count;
+}
+
+// Ejemplo de uso:
+const inputArr = [12, 2, 6, 7, 11];
+console.log(`Número de arreglos válidos: ${SeatingStudents(inputArr)}`);
+
+
+SeatingStudents([12, 2, 6, 7, 11])

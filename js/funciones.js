@@ -29,16 +29,22 @@ function capturar_datos(){
         alert('Todos los campos deben contener solo números o no estar vacios');
     } else if (
         m_esfera <= 0 || m_barra <= 0 || longitud <= 0 ||
-        radio <= 0 || theta1 <= 0 || theta2 <= 0 || k <= 0
+        radio <= 0|| theta1 == 0 || theta2 <= 0 || k <= 0
     ) {
         alert('Los números deben ser mayores a cero');
     } else {
-        var inercia=((1/12)*m_barra*(Math.pow(longitud,2))) + 2*(((2/5)*m_esfera*(Math.pow(longitud/2,2)))+
+        if (theta1<0){
+            theta1=(theta1 % (2 * Math.PI)) + (2 * Math.PI)
+            console.log((theta1 % (2 * Math.PI)))
+            console.log(2 * Math.PI)
+        }
+        var inercia=((1/12)*m_barra*(Math.pow(longitud,2))) + 2*(((2/5)*m_esfera*(Math.pow(radio,2)))+
         (m_esfera*(Math.pow(((longitud/2)+radio),2))))
        var w=Math.sqrt(k/inercia)
-       var fhi=2*Math.PI- Math.abs(Math.atan(theta1/(-w*theta2)))
+       //var fhi=2*Math.PI- Math.abs(Math.atan(theta1/(-w*theta2)))
+       var fhi=Math.abs(Math.atan(theta1/(-w*theta2)))    // resultado en radianes 
        var A=theta2/(Math.cos(fhi))
-       console.log(w)
+    
  
        document.getElementById('inercia').value = inercia.toFixed(3);
        document.getElementById('Velocidad').value = w.toFixed(3);
